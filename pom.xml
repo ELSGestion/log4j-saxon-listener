@@ -1,0 +1,97 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+  <groupId>fr.lefebvredalloz.xml</groupId>
+	<artifactId>log4j-saxon-listener</artifactId>
+	<version>1.00.00</version>
+	<packaging>jar</packaging>
+
+	<name>XSLT message listener for Log4j</name>
+
+	 <licenses>
+		<license>
+			<name>MPL-2.0 license</name>
+			<url>https://www.mozilla.org/en-US/MPL/2.0/</url>
+		</license>
+	</licenses>
+
+	<developers>
+		<developer>
+			<name>Hamdi KARRAY</name>
+			<email>h.karray-ext@lefebvre-dalloz.fr</email>
+			<organization>Lefebvre Dalloz</organization>
+			<organizationUrl>https://www.lefebvre-dalloz.fr/</organizationUrl>
+		</developer>
+	</developers>
+
+	<scm>
+		<connection>scm:git:git://github.com/ELSGestion/log4j-saxon-listenere.git</connection>
+		<developerConnection>scm:git:ssh://github.com:ELSGestion/log4j-saxon-listenere.git</developerConnection>
+		<url>http://github.com/ELSGestion/log4j-saxon-listenere/tree/main</url>
+	</scm>
+
+  <properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<!-- CVE-2021-44228 - déc 2021 -->
+		<log4j.version>2.17.0</log4j.version>
+		<slf4j.version>1.7.32</slf4j.version>
+		<!-- CVE-2021-44228 - déc 2021 -->
+		<Saxon-HE.version>11.4</Saxon-HE.version>
+	</properties>
+
+	
+
+	<dependencies>
+
+		<!-- https://mvnrepository.com/artifact/net.sf.saxon/Saxon-HE -->
+		<dependency>
+			<groupId>net.sf.saxon</groupId>
+			<artifactId>Saxon-HE</artifactId>
+			<version>${Saxon-HE.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-api</artifactId>
+			<version>${log4j.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>${slf4j.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+			<version>${log4j.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-jcl</artifactId>
+			<version>${log4j.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-slf4j-impl</artifactId>
+			<version>${log4j.version}</version>
+		</dependency>
+
+	</dependencies>
+
+	<distributionManagement>
+    <snapshotRepository>
+      <id>${snapshotRepositoryId}</id>
+      <url>${snapshotRepositoryUrl}</url>
+    </snapshotRepository>
+    <repository>
+      <id>${releaseRepositoryId}</id>
+      <url>${releaseRepositoryUrl}</url>
+    </repository>
+  </distributionManagement>
+  
+
+</project>
