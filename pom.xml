@@ -27,9 +27,9 @@
 	</developers>
 
 	<scm>
-		<connection>scm:git:git://github.com/ELSGestion/log4j-saxon-listenere.git</connection>
-		<developerConnection>scm:git:ssh://github.com:ELSGestion/log4j-saxon-listenere.git</developerConnection>
-		<url>http://github.com/ELSGestion/log4j-saxon-listenere/tree/main</url>
+		<connection>scm:git:git://github.com/ELSGestion/log4j-saxon-listener.git</connection>
+		<developerConnection>scm:git:ssh://github.com:ELSGestion/log4j-saxon-listener.git</developerConnection>
+		<url>http://github.com/ELSGestion/log4j-saxon-listener/tree/main</url>
 	</scm>
 
   <properties>
